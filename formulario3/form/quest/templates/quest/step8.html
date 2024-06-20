@@ -1,0 +1,38 @@
+{% extends 'quest/base.html' %}
+{% load static %}
+{% block title %}KREALIS{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <h2>¿Cuál <span class="bold-text">fachada</span> prefieres?</h2>
+        <label class="radio-label">
+            <input type="radio" name="facade_image" value="facade1.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/facade1.jpg' %}" alt="Facade 1" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="facade_image" value="facade2.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/facade2.jpg' %}" alt="Facade 2" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="facade_image" value="facade3.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/facade3.jpg' %}" alt="Facade 3" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="facade_image" value="facade4.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/facade4.jpg' %}" alt="Facade 4" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="facade_image" value="facade5.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/facade5.jpg' %}" alt="Facade 5" width="250" height="350">
+        </label>
+    </div>
+    <button class="bold-text" type="submit">Enviar</button>
+</form>    
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'quest/base.html' %}
+{% load static %}
+{% block title %}KREALIS{% endblock %}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <h2>¿Cuál de estas <span class="bold-text">maderas</span> te gusta más?</h2>
+        <label class="radio-label">
+            <input type="radio" name="wood_images" value="wood1.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/wood1.jpg' %}" alt="Wood 1" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="wood_images" value="wood2.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/wood2.jpg' %}" alt="Wood 2" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="wood_images" value="wood3.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/wood3.jpg' %}" alt="Wood 3" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="wood_images" value="wood4.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/wood4.jpg' %}" alt="Wood 4" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="wood_images" value="wood5.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/wood5.jpg' %}" alt="Wood 5" width="250" height="350">
+        </label>
+        <label class="radio-label">
+            <input type="radio" name="wood_images" value="wood6.jpg">
+            <span class="custom-radio"></span>
+            <img src="{% static 'images/wood6.jpg' %}" alt="Wood 6" width="250" height="350">
+        </label>
+    </div>
+    <button class="bold-text" type="submit">Enviar</button>
+</form>
+{% endblock %}
+
